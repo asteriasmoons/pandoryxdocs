@@ -102,7 +102,7 @@ export default async function DocPage({ params }: PageProps) {
     return (
       <main style={{ flex: "0 1 900px", minWidth: 0, padding: "2rem", boxSizing: "border-box" }}>
         <h1>{navItem.label}</h1>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "1rem", marginTop: "1.5rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "1.5rem", marginTop: "1.5rem" }}>
           {navItem.children?.map((child) => (
             <NextLink
               key={child.to}
