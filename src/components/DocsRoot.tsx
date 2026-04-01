@@ -27,7 +27,7 @@ function NavItem({ item, currentPath, depth = 0, onNavigate }: NavItemProps) {
       <Link
         href={item.to}
         onClick={onNavigate}
-        className={`ely-root-link${currentPath === item.to ? " ely-root-link--active" : ""}`}
+        className={`pan-root-link${currentPath === item.to ? " pan-root-link--active" : ""}`}
         style={{ paddingLeft: item.icon ? paddingLeft : childPaddingLeft }}
       >
         {item.icon && (
@@ -35,7 +35,7 @@ function NavItem({ item, currentPath, depth = 0, onNavigate }: NavItemProps) {
             src={item.icon}
             width={18}
             height={18}
-            className="ely-root-icon"
+            className="pan-root-icon"
             alt=""
             unoptimized
           />
@@ -46,11 +46,11 @@ function NavItem({ item, currentPath, depth = 0, onNavigate }: NavItemProps) {
   }
 
   return (
-    <div className="ely-root-group">
-      <div className="ely-root-group-header" onClick={() => setOpen((v) => !v)}>
+    <div className="pan-root-group">
+      <div className="pan-root-group-header" onClick={() => setOpen((v) => !v)}>
         <Link
           href={item.to}
-          className={`ely-root-link ely-root-link--category${isActive ? " ely-root-link--active" : ""}`}
+          className={`pan-root-link pan-root-link--category${isActive ? " pan-root-link--active" : ""}`}
           style={{ paddingLeft }}
           onClick={(e) => {
             e.stopPropagation();
@@ -62,7 +62,7 @@ function NavItem({ item, currentPath, depth = 0, onNavigate }: NavItemProps) {
               src={item.icon}
               width={18}
               height={18}
-              className="ely-root-icon"
+              className="pan-root-icon"
               alt=""
               unoptimized
             />
@@ -72,7 +72,7 @@ function NavItem({ item, currentPath, depth = 0, onNavigate }: NavItemProps) {
 
         <button
           type="button"
-          className="ely-root-caret"
+          className="pan-root-caret"
           aria-label={isExpanded ? "Collapse" : "Expand"}
           onClick={(e) => {
             e.stopPropagation();
@@ -84,7 +84,7 @@ function NavItem({ item, currentPath, depth = 0, onNavigate }: NavItemProps) {
       </div>
 
       {isExpanded && (
-        <div className="ely-root-children">
+        <div className="pan-root-children">
           {item.children?.map((child) => (
             <NavItem
               key={child.to}
@@ -128,66 +128,66 @@ export default function DocsRoot({ children }: DocsRootProps) {
 
   useEffect(() => {
     if (isDesktop && isOpen) {
-      document.body.style.setProperty("--ely-shift", "var(--ely-sidebar-width)");
+      document.body.style.setProperty("--pan-shift", "var(--pan-sidebar-width)");
     } else {
-      document.body.style.setProperty("--ely-shift", "0px");
-    }
+      document.body.style.setProperty("--pan-shift", "0px");
+      } 
 
-    return () => {
-      document.body.style.setProperty("--ely-shift", "0px");
+      return () => {
+      document.body.style.setProperty("--pan-shift", "0px");
     };
   }, [isOpen, isDesktop]);
 
   return (
     <>
-      <header className="ely-root-header">
+      <header className="pan-root-header">
         <button
           type="button"
-          className="ely-root-toggle"
+          className="pan-root-toggle"
           aria-label="Open navigation"
           onClick={() => setIsOpen(true)}
         >
           ☰
         </button>
 
-        <div className="ely-root-header-brand">
+        <div className="pan-root-header-brand">
           <Image
             src="/img/logo.png"
             width={32}
             height={32}
-            alt="Elysium"
+            alt="Pandoryx"
             unoptimized
           />
-          <span className="ely-root-title">Elysium Docs</span>
+          <span className="pan-root-title">Pandoryx Docs</span>
         </div>
 
-        <nav className="ely-root-header-nav">
-          <Link href="/docs/homepage" className="ely-root-header-link">
+        <nav className="pan-root-header-nav">
+          <Link href="/docs/homepage" className="pan-root-header-link">
             Docs
           </Link>
-          <Link href="/updates" className="ely-root-header-link">
+          <Link href="/updates" className="pan-root-header-link">
             Updates
           </Link>
         </nav>
       </header>
 
       {!isDesktop && isOpen && (
-        <div className="ely-root-overlay" onClick={() => setIsOpen(false)} />
+        <div className="pan-root-overlay" onClick={() => setIsOpen(false)} />
       )}
 
       <aside
-        className={`ely-root-sidebar${isOpen ? " ely-root-sidebar--open" : ""}`}
+        className={`pan-root-sidebar${isOpen ? " pan-root-sidebar--open" : ""}`}
         aria-hidden={!isOpen}
       >
         <button
           type="button"
-          className="ely-root-close"
+          className="pan-root-close"
           onClick={() => setIsOpen(false)}
         >
           Close
         </button>
 
-        <nav className="ely-root-nav">
+        <nav className="pan-root-nav">
           {NAV.map((item) => (
             <NavItem
               key={item.to}
@@ -200,7 +200,7 @@ export default function DocsRoot({ children }: DocsRootProps) {
       </aside>
 
       <div
-        className={`ely-root-main${isOpen && isDesktop ? " sidebar-open" : ""}`}
+        className={`pan-root-main${isOpen && isDesktop ? " sidebar-open" : ""}`}
         style={{ width: "100%", minWidth: 0 }}
       >
         {children}
