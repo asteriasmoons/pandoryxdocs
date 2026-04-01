@@ -702,4 +702,5 @@ export const NAV: NavItemType[] = [
    icon: "/img/icons/loveflag.svg"
   },
   { label: "Our Discord", to: "/docs/discord", icon: "/img/icons/discord.svg" },
+  { label: "Terms of Service", to: "/docs/terms-of-service", icon: "/img/icons/terms.svg" },
 ];
