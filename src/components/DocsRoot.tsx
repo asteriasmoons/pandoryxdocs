@@ -150,7 +150,7 @@ export default function DocsRoot({ children }: DocsRootProps) {
           ☰
         </button>
 
-        <div className="pan-root-header-brand">
+        <div className="pan-root-header-brand" onClick={() => window.location.href = '/'} style={{ cursor: "pointer" }}>
           <Image
             src="/img/logo.png"
             width={34}

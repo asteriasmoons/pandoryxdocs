@@ -278,6 +278,8 @@ h6.heading-with-icon {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .pan-root-title {
