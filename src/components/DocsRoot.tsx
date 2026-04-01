@@ -153,8 +153,8 @@ export default function DocsRoot({ children }: DocsRootProps) {
         <div className="pan-root-header-brand">
           <Image
             src="/img/logo.png"
-            width={32}
-            height={32}
+            width={34}
+            height={34}
             alt="Pandoryx"
             unoptimized
           />
