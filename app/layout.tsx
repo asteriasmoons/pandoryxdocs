@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elysium Docs",
+  title: "Pandoryx Docs",
   description: "Docs site",
 };
 
