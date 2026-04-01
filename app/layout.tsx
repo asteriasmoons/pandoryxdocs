@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Pandoryx Docs",
   description: "Docs site",
+  icons: {
+    icon: "/img/favicon.svg",
+  },
 };
 
 export default function RootLayout({
