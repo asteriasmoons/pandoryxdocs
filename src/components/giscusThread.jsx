@@ -6,10 +6,10 @@ import Giscus from "@giscus/react";
 export default function GiscusThread() {
   return (
     <Giscus
-      repo="asteriasmoons/elysium-docs"
-      repoId="R_kgDOR1PkZQ"
+      repo="asteriasmoons/pandoryxdocs"
+      repoId="R_kgDOR2f0Nw"
       category="Announcements"
-      categoryId="DIC_kwDOR1PkZc4C5tSI"
+      categoryId="DIC_kwDOR2f0N84C5yx1"
       mapping="pathname"
       strict="0"
       reactionsEnabled="1"
@@ -17,6 +17,7 @@ export default function GiscusThread() {
       inputPosition="top"
       theme="preferred_color_scheme"
       lang="en"
+      loading="lazy"
     />
   );
 }
