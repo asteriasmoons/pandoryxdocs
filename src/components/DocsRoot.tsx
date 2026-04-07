@@ -152,7 +152,7 @@ export default function DocsRoot({ children }: DocsRootProps) {
 
         <div className="pan-root-header-brand" onClick={() => window.location.href = '/'} style={{ cursor: "pointer" }}>
           <Image
-            src="/img/logo.png"
+            src="/img/favicon.svg"
             width={34}
             height={34}
             alt="Pandoryx"
